@@ -1,0 +1,195 @@
+/**
+*
+*   CSS Reset
+*
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+a {
+	text-decoration: none;
+	font: inherit;
+	color: inherit;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+button:focus {
+	outline:0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+/**
+*
+*   Default Styles
+*
+*/
+
+/*
+*   Link for font
+*   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+*   
+*   Page titles:    1.25em
+*   Paragraph text: .874em
+*   List titles:    .874em
+*   Important text
+*     Snippets:     1em
+*   Secondary text,
+*     captions:     .874em;
+*   Buttons, tabs:  .874em;
+*   Text inputs:    1em;
+*
+*/
+
+* {
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 300;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 6em;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 3.75em;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 3em;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 2.1em;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+h6 {
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+
+/**
+*
+*   Container Styles
+*
+*/
+
+
+.app-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #eeeeee;
+}
+
+.sidebar-container {
+    background-color: white;
+    min-width: 0px;
+    max-width: 0px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: max-width .5s ease-in-out;
+    z-index: 400;
+}
+.main-container {
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff5ee
+}
+.header-container {
+    width: 100%;
+    height: 80px;
+    background-color: #ff6347;
+}
+.content-container {
+    width: 100%;
+    min-height: 100%;
+}
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 80px;
+    z-index: 200;
+    background-color: #3f3434;
+}
+.settings-container {
+    width: 100%;
+    z-index: 100;
+}
